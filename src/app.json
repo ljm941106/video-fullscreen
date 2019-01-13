@@ -1,0 +1,37 @@
+{
+  "pages": [
+    "pages/index/main",
+    "pages/dissertation/main",
+    "pages/item/main",
+    "pages/itemList/main",
+    "pages/search/main",
+    "pages/counter/main"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "white",
+    "navigationBarTitleText": "视听版纳",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true,
+    "onReachBottomDistance": 50
+  },
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#333",
+    "borderStyle": "white",
+    "backgroundColor": "#f8f9fb",
+    "list": [
+      {
+        "text": "首页",
+        "pagePath": "pages/index/main",
+        "iconPath": "static/index.png",
+        "selectedIconPath": "static/index_h.png"
+      }, {
+        "text": "专题",
+        "pagePath": "pages/dissertation/main",
+        "iconPath": "static/pro.png",
+        "selectedIconPath": "static/pro_h.png"
+      }
+    ]
+  }
+}
