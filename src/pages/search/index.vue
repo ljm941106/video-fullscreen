@@ -2,14 +2,14 @@
   <div class="search_page">
     <video class="video" id="videoPlay" :src="videoUrl" loop="true" @fullscreenchange='fullscreenchange' controls @ended="videoEnd" @play="onVideoplay"></video>
     <div class="search_box">
-      <img src="http://www.svlec.cn/public/static/img/search.png" style="width: 27rpx;height: 30rpx;" />
+      <img src="https://stbn.bnjykj.com/public/static/img/search.png" style="width: 27rpx;height: 30rpx;" />
       <input type="search" v-model.lazy="keyword" placeholder="搜索" @keypress="keySearch($event)" @change="search()" />
     </div>
     <div class="searched_list" v-if="list.length>0">
       <div class="item" v-for="(i,index) in list" wx:key="index">
         <div class="img" @click="playVideo(i,i.url)">
           <img class="display_img" :src="i.img" />
-          <img class="absolute_play" src="http://www.svlec.cn/public/static/img/whitePlay.png" />
+          <img class="absolute_play" src="https://stbn.bnjykj.com/public/static/img/whitePlay.png" />
         </div>
         <div class="intro" @click="gotoItem('/pages/item/main?pid=' + i.id+'&cid='+i.class_id)">
           <h2>{{i.title}}</h2>
@@ -18,10 +18,10 @@
             <span>{{i.modtime}}</span>
             <span @click.stop="slideP(i,index)">
 						 <template v-if="!i.showP">
-						 <img src="http://www.svlec.cn/public/static/img/drection_bottom.png"/>&nbsp;展开
+						 <img src="https://stbn.bnjykj.com/public/static/img/drection_bottom.png"/>&nbsp;展开
 						 </template>
 						 <template v-else="">
-						 <img src="http://www.svlec.cn/public/static/img/drection_top.png"/>&nbsp;收起
+						 <img src="https://stbn.bnjykj.com/public/static/img/drection_top.png"/>&nbsp;收起
 						 </template>
 					</span>
           </div>
@@ -35,7 +35,7 @@
       </div>
       <ul>
         <li v-for="(i,index) in searchedHistory" :key="index" @click="historyToSearch(i)">
-          <img src="http://www.svlec.cn/public/static/img/search.png" style="width: 27rpx;height: 30rpx;" />
+          <img src="https://stbn.bnjykj.com/public/static/img/search.png" style="width: 27rpx;height: 30rpx;" />
           <span>{{i}}</span>
         </li>
       </ul>

@@ -5,7 +5,7 @@
       </video>
       <div class="img" @click="playVideo()">
         <img class="display_img" :src="item.img" />
-        <img class="absolute_play" src="http://www.svlec.cn/public/static/img/whitePlay.png" />
+        <img class="absolute_play" src="https://stbn.bnjykj.com/public/static/img/whitePlay.png" />
       </div>
       <div class="intro">
         <h2>{{item.title}}</h2>
@@ -16,13 +16,13 @@
         </div>
         <div class="operation">
           <div class="share" @click.stop="producePoster(item.img,item.title,item.times,item.description,item.qr_code)">
-            <img src="http://www.svlec.cn/public/static/img/share.png" />
+            <img src="https://stbn.bnjykj.com/public/static/img/share.png" />
           </div>
           <div class="like" @click.stop="like(i)">
-            <img v-if="!liked" src="http://www.svlec.cn/public/static/img/like.png" /><img src="http://www.svlec.cn/public/static/img/liked.png" v-else="" /><span>{{item.likes}}</span>
+            <img v-if="!liked" src="https://stbn.bnjykj.com/public/static/img/like.png" /><img src="https://stbn.bnjykj.com/public/static/img/liked.png" v-else="" /><span>{{item.likes}}</span>
           </div>
           <div class="comment_num">
-            <img src="http://www.svlec.cn/public/static/img/comment.png" /><span>{{item.comment_nums}}</span>
+            <img src="https://stbn.bnjykj.com/public/static/img/comment.png" /><span>{{item.comment_nums}}</span>
           </div>
         </div>
       </div>
@@ -331,7 +331,7 @@
         //获取分享背景
         let getBgImg = new Promise((resovle, reject) => {
           wx.downloadFile({
-            url: 'https://www.svlec.cn/public/static/img/timg.jpg',
+            url: 'https://stbn.bnjykj.com/public/static/img/timg.jpg',
             success: function(qrCode) {
               resovle(qrCode)
             }

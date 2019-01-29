@@ -32,18 +32,18 @@
 			var that = this
 			const ctx = wx.createCanvasContext('myCanvas')
 			wx.downloadFile({
-				url: 'https://www.svlec.cn/qr_code/23.jpg',
+				url: 'https://stbn.bnjykj.com/qr_code/23.jpg',
 				success: function(res1) {
 					console.log(res1.tempFilePath);
 					ctx.drawImage(res1.tempFilePath, 0, 0, windowWidth, windowHeight)
 					ctx.draw();
 				}
 			})
-			//			var bgPath = 'http://www.svlec.cn/public/static/img/banner.png'
-			var portraitPath = 'http://www.svlec.cn/public/static/img/index.png'
+			//			var bgPath = 'https://stbn.bnjykj.com/public/static/img/banner.png'
+			var portraitPath = 'https://stbn.bnjykj.com/public/static/img/index.png'
 			var hostNickname = 'pluie'
 
-			var qrPath = 'http://www.svlec.cn/public/static/img/index.png'
+			var qrPath = 'https://stbn.bnjykj.com/public/static/img/index.png'
 			var windowWidth = wx.getSystemInfoSync().screenWidth
 			var windowHeight = wx.getSystemInfoSync().screenHeight
 			this.width = windowWidth + 'px';

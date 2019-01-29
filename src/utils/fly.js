@@ -1,7 +1,7 @@
 var Fly = require('flyio/dist/npm/wx')
 var fly = new Fly()
 
-fly.config.baseURL = 'https://www.svlec.cn/index.php/phone/data/';
+fly.config.baseURL = 'https://stbn.bnjykj.com/index.php/phone/data/';
 
 fly.interceptors.request.use((config, promise) => {
 	wx.showLoading({

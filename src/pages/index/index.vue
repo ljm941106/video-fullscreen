@@ -2,7 +2,7 @@
   <div class="container index">
     <video class="video" id="videoPlay" :src="videoUrl" loop="true" controls @fullscreenchange='fullscreenchange' @ended="videoEnd" @play="onVideoplay"></video>
     <navigator class="search" url="/pages/search/main" hover-class="none">
-      <img src="http://www.svlec.cn/public/static/img/search.png" style="width: 27rpx;height: 30rpx;" /> 搜索
+      <img src="https://stbn.bnjykj.com/public/static/img/search.png" style="width: 27rpx;height: 30rpx;" /> 搜索
     </navigator>
     <swiper class="banner" indicator-dots="true" indicator-color="rgba(0, 0, 0, .3)" indicator-active-color="rgba(0, 0, 0, .88)" autoplay="true" interval="5000" duration="500">
       <block v-for="i in banner" :key="index">
@@ -14,7 +14,7 @@
     <div class="item" v-for="(i,index) in list" wx:key="index">
       <div class="img" @click="playVideo(i,i.url)">
         <img class="display_img" :src="i.img" />
-        <img class="absolute_play" src="http://www.svlec.cn/public/static/img/whitePlay.png" />
+        <img class="absolute_play" src="https://stbn.bnjykj.com/public/static/img/whitePlay.png" />
       </div>
       <div class="intro" @click="gotoItem('/pages/item/main?pid=' + i.id+'&cid='+i.class_id)">
         <h2>{{i.title}}</h2>
@@ -23,22 +23,22 @@
           <span>{{i.modtime}}</span>
           <span @click.stop="slideP(i,index)">
 						 <template v-if="!i.showP">
-						 <img src="http://www.svlec.cn/public/static/img/drection_bottom.png"/>&nbsp;展开
+						 <img src="https://stbn.bnjykj.com/public/static/img/drection_bottom.png"/>&nbsp;展开
 						 </template>
 						 <template v-else="">
-						 <img src="http://www.svlec.cn/public/static/img/drection_top.png"/>&nbsp;收起
+						 <img src="https://stbn.bnjykj.com/public/static/img/drection_top.png"/>&nbsp;收起
 						 </template>
 					</span>
         </div>
         <div class="operation">
           <div class="share" @click.stop="producePoster(i.img,i.title,i.times,i.description,i.qr_code,i.id)">
-            <img src="http://www.svlec.cn/public/static/img/share.png" />
+            <img src="https://stbn.bnjykj.com/public/static/img/share.png" />
           </div>
           <div class="like" @click.stop="like(i)">
-            <img v-if="!i.liked" src="http://www.svlec.cn/public/static/img/like.png" /><img src="http://www.svlec.cn/public/static/img/liked.png" v-if="i.liked" /><span>{{i.likes}}</span>
+            <img v-if="!i.liked" src="https://stbn.bnjykj.com/public/static/img/like.png" /><img src="https://stbn.bnjykj.com/public/static/img/liked.png" v-if="i.liked" /><span>{{i.likes}}</span>
           </div>
           <div class="comment" @click.stop="gotoComment('/pages/item/main?pid=' + i.id+'&cid='+i.class_id+'&s=s')">
-            <img src="http://www.svlec.cn/public/static/img/comment.png" /> <span>{{i.comment_nums}}</span>
+            <img src="https://stbn.bnjykj.com/public/static/img/comment.png" /> <span>{{i.comment_nums}}</span>
           </div>
         </div>
         <div class="canvas_box" :style="{width:canvasWidth+'px',height:canvasHeight+'px'}">
@@ -55,17 +55,17 @@
 					<h2>{{shareTitle}}</h2>
 					<div class="share_menu">
 						<button class="friend" open-type="share" @click="shareToFriend($event)">
-							<img src="http://www.svlec.cn/public/static/img/icon_weixin.png" />
+							<img src="https://stbn.bnjykj.com/public/static/img/icon_weixin.png" />
 							<div>分享好友</div>
 						</button>
 						<div class="circle" @click="shareToFriendCircle">
-							<img src="http://www.svlec.cn/public/static/img/icon_weixinf.png" />
+							<img src="https://stbn.bnjykj.com/public/static/img/icon_weixinf.png" />
 							<div>分享朋友圈</div>
 						</div>
 					</div>
 				</div>
 				<div class="share_close" @click="shareClose">
-					<img src="http://www.svlec.cn/public/static/img/close_white.png" />
+					<img src="https://stbn.bnjykj.com/public/static/img/close_white.png" />
 				</div>
 			</div>
 		</div>-->
@@ -86,7 +86,7 @@
         videoUrl: '',
         videoLength: 0,
         shareShow: false,
-        shareImg: 'http://www.svlec.cn/public/static/img/banner.png',
+        shareImg: 'https://stbn.bnjykj.com/public/static/img/banner.png',
         shareTitle: '测试标题',
         canvasToImg: '',
         sharedImg: false, //展示海报
@@ -259,7 +259,7 @@
         //获取分享背景
         let getBgImg = new Promise((resovle, reject) => {
           wx.downloadFile({
-            url: 'https://www.svlec.cn/public/static/img/timg.jpg',
+            url: 'https://stbn.bnjykj.com/public/static/img/timg.jpg',
             success: function(qrCode) {
               resovle(qrCode)
             }

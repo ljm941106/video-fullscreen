@@ -2,13 +2,13 @@
 	<div class="">
 		<div class="operation">
 			<div class="share" @click.stop="producePic">
-				<img src="http://www.svlec.cn/public/static/img/share.png" />
+				<img src="http://stbn.bnjykj.com/public/static/img/share.png" />
 			</div>
 			<div class="like">
-				<img src="http://www.svlec.cn/public/static/img/like.png" />&nbsp;58
+				<img src="http://stbn.bnjykj.com/public/static/img/like.png" />&nbsp;58
 			</div>
 			<div class="comment">
-				<img src="http://www.svlec.cn/public/static/img/comment.png" />&nbsp;78
+				<img src="http://stbn.bnjykj.com/public/static/img/comment.png" />&nbsp;78
 			</div>
 		</div>
 		<view class="canvas-box">
@@ -39,7 +39,7 @@
 				//绘制canvas图片
 				var that = this
 				const ctx = wx.createCanvasContext('myCanvas')
-				var bgPath = 'http://www.svlec.cn/public/static/img/whitePlay.png'
+				var bgPath = 'http://stbn.bnjykj.com/public/static/img/whitePlay.png'
 				var portraitPath = this.imgUrl
 				//				var hostNickname = app.globalData.userInfo.nickName
 
